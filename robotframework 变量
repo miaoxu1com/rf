@@ -1,4 +1,4 @@
-https://www.cnblogs.com/chengchengla1990/p/9895244.html
+https://www.cnblogs.com/chengchengla1990/p/9895244.html---函数中注入的实参名字无所谓对应的是  脚本入参的位置
 变量文件 在一个文件中定义多个环境的配置
 https://www.jianshu.com/p/003c14257b83
 另外一种就是每一个配置文件对应一个环境  和 一个jenkins任务  和一个运行脚本
