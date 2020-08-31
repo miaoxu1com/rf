@@ -5,3 +5,58 @@ https://www.jianshu.com/p/003c14257b83
 
 经过第一次设计发现在测试套件中定义过多的表格变量不利于维护，还是使用变量文件更利于后期的维护
 参数文件也类似 robotframework 的变量文件  参数过多就用变量文件来用
+
+
+https://lework.github.io/2019/06/30/k8s-ha-bin-install/
+
+开源集成安全很重要
+
+postman
+pre-requestScript
+
+const  loginrequest = {
+url:"http://url"
+header:"content-Type:content"
+method:"Post",
+  body:{
+    mode:"raw",
+    raw:"jsonstr"--params表单形式
+  }
+}
+pm.sendRequest(loginrequest,function(err,res){
+  console.log(res);
+  pm.globals.set("varName",resvalue)
+})
+body 是json对象
+const myrequest = {
+url:"http://url"
+header:"content-Type:content"
+method:"Post",
+body:{
+    mode:"raw",
+    raw:JOSN.stringify({
+      jsonObj
+    })
+  }
+}
+pm.sendRequest(myrequest,function(err,res){
+})
+在pre-requestScript中的响应为数组，在tests中获取该数组进行处理的方法  有的时候是get 但是在postman可能是post请求这个要试试
+var resdata = JSON.parse(responseBody);-通过这种发放获取到pre-script中的响应内容
+postman中的循环发送请求
+for (var i in listData){
+  var myrequest = {
+  url:"http://url"
+  header:"content-Type:content"
+  method:"Post",
+  body:{
+      mode:"raw",
+      raw:JOSN.stringify({
+        jsonObj
+      })
+    }
+  }
+  --注意这里请求体中当时做实验是不能有内容否则报错
+  pm.sendRequest(myrequest,function(err,response){
+  })
+}
