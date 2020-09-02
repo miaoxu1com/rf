@@ -60,3 +60,19 @@ for (var i in listData){
   pm.sendRequest(myrequest,function(err,response){
   })
 }
+rf日志文件jenkins直接打开的解决方法
+https://www.coder.work/article/350168
+答案在Jenkins问题跟踪系统中解释：https://issues.jenkins-ci.org/browse/JENKINS-32118
+要解决您的问题，您必须：
+连接到您的Jenkins URL（http://[IP]:8080/）
+从左侧面板单击Manage Jenkins。
+单击脚本控制台
+将此复制到域中
+System.setProperty("hudson.model.DirectoryBrowserSupport.CSP","sandbox allow-scripts; default-src 'none'; img-src 'self' data: ; style-src 'self' 'unsafe-inline' data: ; script-src 'self' 'unsafe-inline' 'unsafe-eval' ;")
+单击运行按钮。
+执行你的詹金斯建造。
+
+robotframework 合并Xml
+https://blog.csdn.net/rungong123/article/details/88385857
+
+
