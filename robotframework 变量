@@ -75,4 +75,10 @@ System.setProperty("hudson.model.DirectoryBrowserSupport.CSP","sandbox allow-scr
 robotframework 合并Xml
 https://blog.csdn.net/rungong123/article/details/88385857
 
-
+python批量插入配置到到nignx文件
+Python 批量更新 nginx 配置文件
+https://wiki.jikexueyuan.com/project/python-actual-combat/tutorial-27.html
+一个修改nginx.conf配置文件的开源工具
+http://www.python88.cn/art/45898/
+nginxparser, 使用Pyparsing解析 Nginx 配置
+https://www.kutu66.com/GitHub/article_97669
