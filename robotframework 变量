@@ -84,3 +84,7 @@ nginxparser, 使用Pyparsing解析 Nginx 配置
 https://www.kutu66.com/GitHub/article_97669
 PyNginxConfig怎么用
 nginxparser怎么用
+
+可以自定义错误信息  should be as strings  条件1  条件2  msg自定义信息   ride中错误信息就是Fail开头后面的  测试报告中就是Message一栏
+
+然后ride打开robot文件就没有文件夹了  用命令行执行时一定要指定.robot文件这样 解析xml文件才能解析到suite的报错信息
