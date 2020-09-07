@@ -9,6 +9,19 @@ https://www.jianshu.com/p/003c14257b83
 
 https://lework.github.io/2019/06/30/k8s-ha-bin-install/
 
+python
+redisConfig类就是操作redis的一个类
+
+类init就是初始化的初始化之后是全局变量
+后面方法要用就现在这里初始化一个空数组如：dataList = []
+后面方法可以从接口返回数据 或者 初始化的时候从文档  数据库读取数据 对初始化变量进行赋值
+https://blog.csdn.net/junmoxi/article/details/80913060
+SpringBoot使用redis做缓存机制
+
+
+windows下安装和配置Redis
+https://www.jianshu.com/p/e16d23e358c0
+
 开源集成安全很重要
 
 postman
