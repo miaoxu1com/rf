@@ -13,6 +13,9 @@ redis是不是持久化把服务端进程关闭掉然后重新打开就知道数
 为 Redis 添加 JSON 数据类型
 https://cloud.tencent.com/developer/article/1084698
 
+Redis 选择hash还是string 存储数据？
+https://juejin.im/post/6844903872834584590
+
 格式校验利器：JSON Schema 简介
 https://juejin.im/post/6844903641921355789
 
