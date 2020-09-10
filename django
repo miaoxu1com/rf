@@ -5,7 +5,7 @@
 我直接执行
 django-admin startapp djangoapp
 导致执行下面的没有manage.py，然后就不明白哪里错了找不到原因，后面发现要先执行
-django-admin startproject djangoproject 
+django-admin startproject djangoproject --既然先要初始化工程目录就不能再pycharm中执行了要先在cmd中执行这一步后面的在pycharm中执行
 再执行才可以
 python manage.py runserver 0.0.0.0:8000
 还有就是
@@ -23,3 +23,5 @@ python manager.py migrate
 也就是说数据库每次更改都要执行下这个命令更新migrate文件然后更新数据库表
 makemigrations命令就是我们关联好模型后帮我们生成对应模型的sql语句不用手动去创建数据库表了
 这些脚手架命令都是帮助我们生成对应的文件减少开发的工作量
+
+修改的脚本改变时保存时会帮我自动重启服务器
