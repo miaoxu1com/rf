@@ -3,6 +3,9 @@ https://www.cnblogs.com/chengchengla1990/p/9895244.html---函数中注入的实�
 https://www.jianshu.com/p/003c14257b83
 另外一种就是每一个配置文件对应一个环境  和 一个jenkins任务  和一个运行脚本
 
+python语言json schema validator编写
+https://liqiang.io/post/use-json-schema-with-pytho
+
 经过第一次设计发现在测试套件中定义过多的表格变量不利于维护，还是使用变量文件更利于后期的维护
 参数文件也类似 robotframework 的变量文件  参数过多就用变量文件来用
 
