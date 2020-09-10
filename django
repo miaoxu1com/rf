@@ -1,0 +1,25 @@
+首先菜鸟入门要先从重型框架开始学起，因为整合的组件全，你要用的都集成了，也不会缺少功能，不用去到处找扩展库，减少了代码的开发，严格的规范，灵活的东西虽然灵活但是没有用过规范化的东西就不知道对应的规范
+，直接用不知道规范无从下手，所以先用带有惯例性规范结构的框架，明白了原理再去使用轻量化灵活就知道改怎么用了。
+然后就是新手一定要严格从 脚手架第一步开始不要节省步骤
+错误示范：
+我直接执行
+django-admin startapp djangoapp
+导致执行下面的没有manage.py，然后就不明白哪里错了找不到原因，后面发现要先执行
+django-admin startproject djangoproject 
+再执行才可以
+python manage.py runserver 0.0.0.0:8000
+还有就是
+python manage.py makemigrations
+
+相当于在该app下建立 migrations目录，并记录下你所有的关于modes.py的改动，比如0001_initial.py， 但是这个改动还没有作用到数据库文件
+
+你可以手动打开这个文件，看看里面是什么。当makemigrations之后产生了0001_initial.py 文件，你可以查看下该migrations会对应于什么样子的SQL命令，使用如下命令，
+
+python manger.py sqlmigrate theapp 0001
+
+在makemigrations之后执行命令：
+python manager.py migrate
+将该改动作用到数据库文件，比如产生table，修改字段的类型等。
+也就是说数据库每次更改都要执行下这个命令更新migrate文件然后更新数据库表
+makemigrations命令就是我们关联好模型后帮我们生成对应模型的sql语句不用手动去创建数据库表了
+这些脚手架命令都是帮助我们生成对应的文件减少开发的工作量
