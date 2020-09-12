@@ -79,3 +79,4 @@ def newman(self,call_func):
 回调就是在A中调用B的方法然后把C传给B
 构造类的实例实际就是对类的内部进行初始化，初始化之后就可以调用了
 
+random.shuffle()随机排序列表
