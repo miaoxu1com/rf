@@ -43,7 +43,14 @@ class B(A):
  所有我们在写多线程时要在子类的init中手动执行 threading.Thread.__init__
 
 
-    
-
+    python生成组件的win32 COM接口文件调用对应的接口与程序进行交互
+1.安装pywin32
+   安装pywin32 包含了win32api 和win32com 等几个非常强大的模块，安装完成后，会在python目录下的Lib/site-packages/下生成win32 win32com 和win32comext三个文件夹
+里边都有demons
+2.生成com组件对应的.py文件
+双击/win32com/client/目录中的make.py会弹出机器中所有的com组件
+双击我们需要的类型库，会在/win32com/gent_py/目录下生成该组件的py文件 找不到使用everything搜索
+3.研究生成的py接口文件
+打开py文件会显示一些基本信息，以及接口函数，一些重要的参数（CLSID）
 
 
