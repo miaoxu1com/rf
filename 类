@@ -26,5 +26,24 @@ savefile相当于了init方法的作用只是init是在初始化实例的时候�
 类在定义的时候是()里不是写的参数，定义时注入代表的是继承类,实例化是调用是参数的注入
 读和写都是对文件来说的,wb写二进制文件首先是会在内存中开辟二进制缓存空间然后把读取到的数据流写到这个缓存空间中最后写入到磁盘
 
+自己模拟类的继承来探索继承关系A有init函数B继承A，B没有init函数在实例化B时会自动执行A的init
+class A:
+  def __init__(self):
+  print('A')
+class B(A):
+  def man(self):
+    print('man')
+自己模拟类的继承来探索继承关系A有init函数B继承A，B有init函数在实例化B时会执行B的init,这时要想调用A的init就要在B的init中手动初始化A的init方法
+class A:
+  def __init__(self):
+  print('A')
+class B(A):
+  def __init__(self):
+    print('B')
+ 所有我们在写多线程时要在子类的init中手动执行 threading.Thread.__init__
+
+
+    
+
 
 
