@@ -1,0 +1,26 @@
+class  myclass:
+  def savafile(self,a):
+    self.a = a
+    self.b = 'b'
+  def findfile(self):
+    print(self.a,self.b)
+  def deletefile(self,c)
+    print(c)
+    print(self.c)#打印出错因为注入到类中的实参是没有在init中初始化所以c不是类的属性,只是一个方法的局部变量
+testA = myclass('a')
+#这里实例testA的属性不是类的属性，所以一下属性只有testA有
+testA.name = 'wusu'
+testA.sex = 'man'
+print(testA.name,testA.sex)
+
+testB = myclass('b')
+print(testB.name,testB.sex)#打印报错name,sex属于实例testA的，类没有这些属性所以报错
+testB.findfile() #报错因为self.a,self.b是在savafile方法中定义的,没有先调用savafile方法self.a，self.b就不会被加载到内存中
+所以要想testB.findfile() ，就要先执行testB.savafile()
+savefile相当于了init方法的作用只是init是在初始化实例的时候就被自动执行了，属性已经被提前加载到内存中了所以后面所有的方法才可以调用在init中定义的属性，也就是属性被全局化了
+
+所以类可以没有init  但是要用类的属性时一定要使用init 方便了很多，初始化都可以在init中添加
+定义类方法中每个方法中都要有一个self这个就是在每个方法中都注入了一个类的实例，而且有没有init都有self,在实例化类的时候就会有一个self被加载到内存中并指向这个类,打印self可以看到显示的
+是实例的十六进制地址，实例化几次就会打印几次地址
+
+
