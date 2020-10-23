@@ -30,3 +30,4 @@ makemigrations命令就是我们关联好模型后帮我们生成对应模型的
 python + htmltestrunnner+ smtplib google搜索
 python 生成图表 发送报告 google搜索
 pyechart
+ui测试  无头浏览器 headless   seliniume 
