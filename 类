@@ -86,3 +86,5 @@ random.shuffle()随机排序列表
 打码  接码平台
 
 https://cloud.tencent.com/developer/article/1621113  python  订票
+
+遇到一直提示编码问题 后来看ide原来文件保存时选择的是gbk编码  然后ide显示文件是gbk编码  实际要用utf编码  所以把文件用记事本另存为utf8编码即可
