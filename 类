@@ -98,3 +98,6 @@ python静态方法 不用实例化  拿类名就可以直接调用方法
 python日期对象化  就可以调用对象的方法了  对象之后不能直接拼接 要调用对应的string把对象转成字符串才能拼接
 
 正则表达式对象化 方便复用
+
+auto js定时任务
+https://blog.csdn.net/feiyunjs/article/details/95591249
