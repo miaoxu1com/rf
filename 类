@@ -91,3 +91,6 @@ https://cloud.tencent.com/developer/article/1621113  python  订票
 
 https://www.jianshu.com/p/400c612381dd
 指定脚本的执行解释器
+
+python静态方法 不用实例化  拿类名就可以直接调用方法
+@staticmethod
