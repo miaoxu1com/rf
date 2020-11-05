@@ -1,0 +1,15 @@
+python正则 用好了 很强大
+
+re.sub(patern,repl,orignstr)
+
+patern--你写的正则字符串 正则字符串和你写的普通字符串不一样就是 正则字符串有正则字符 \d \w [\w|\d+]  (?P<name>)给组合起一个名字引用  通过匹配获取匹配值保存  ()就是notepad++的()  组合
+group分组匹配 获取到匹配的结果每次只返回一个匹配结果
+
+repl--函数是给sub调用的函数 所以你写的整个函数不能传自定义参数  只能写一个给sub调用的专用函数  因为你这个函数是供sub调用所以你不能自定义传参sub调用时传递什么参数就是什么参数
+
+orignstr 被匹配的字符串
+
+google --python  正则替换模板变量
+https://www.cnblogs.com/superhin/p/11454931.html
+正则
+https://docs.python.org/zh-cn/3/library/re.html
