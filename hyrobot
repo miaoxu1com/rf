@@ -45,5 +45,7 @@ get_render_url(url="", **kwargs):
   patten = r"{(?P<var>[\w]+)}" # 起一个相同名字就可以循环拿var访问匹配到的值，实现不同值分组替换
   return re.sub(patten, repl_func, url, re.M)
   
+为什么选择.net core  跨平台  框架  语言  开发套件ide  性能  易于部署 一条龙服务
+https://www.zhihu.com/question/351589515
 
 
