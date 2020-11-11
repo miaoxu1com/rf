@@ -173,3 +173,6 @@ run.py
 from publicfunction import *
   run_case1
   
+
+需要动态创建的数据 就不要放在variabledata.py中就定义成一个函数 执行时 按需调用函数去初始化
+用例参数中都会放的数据提到publicfunction中定义成函数进行初始化
