@@ -108,3 +108,15 @@ https://blog.csdn.net/CuGBabyBeaR/article/details/25037687
 获取类的方法但是获取的结果是一个字符串  不能使用  类名.方法或类名.属性调用成员
 
 为什么要写本地端口呢  因为要和本地的进程之间进行通信 所以写了一个本地端口
+
+只要是要import的 都是python的库  比如 robotframework  虽然是一个框架但是也是 python的库 hyrobot也是  所以要把hyrobot放到sit-packages中 否则会报找不到hyrobot
+
+如果我们的数据有字典嵌套
+那么二级字典可以设置为一个变量把二级字典当做一个 原子字典对变量进行赋值  而且我们想要修改值时还不用 从一级字典进行取key直接对原子字典进行修改就可以了 很方便
+
+test={
+    b:["c","d","e"]
+}
+{
+  "a":test
+}
