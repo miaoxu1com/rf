@@ -140,3 +140,36 @@ test={
 
 当是多组数据时就可以用多线程进行不同的数据进行处理了，加快了数据的处理速度，同时处理多个同一个操作
 
+不需要遍历的字典可以使用不同的key，调用时直接用keyname就可以 
+不需要修改的字典可以直接进行字典的嵌套而不用再使用变量去定义二级字典
+
+所有的值必须放在同一个文件 放在另外一个文件时会发现后面定义数据会重复使用另外一个文件中的数据  就要在当前文件再次导入定义的文件，导致多次引入同一个文件冗余
+如：一下就是不集中分散在多个文件中引入时多个文件都引入了导致重复引入，要么重复赋值要么重复引入，放在同一个文件可以解决这个
+publicfunction.py
+def init_data()
+    id=[{
+      "name":"zhangsan"
+      "id":1
+    },{
+      "name":"lisi"
+      "id":2
+    }
+    ]
+    appid={
+      "a":"app1",
+      "b":"aap2"
+    }
+def run_case1():
+  pass
+    
+variabledata.py
+from publicfunction import *
+  api_data={
+  "app_id":appid["a"]
+  }
+  
+  
+run.py
+from publicfunction import *
+  run_case1
+  
