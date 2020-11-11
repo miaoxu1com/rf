@@ -176,3 +176,6 @@ from publicfunction import *
 
 需要动态创建的数据 就不要放在variabledata.py中就定义成一个函数 执行时 按需调用函数去初始化
 用例参数中都会放的数据提到publicfunction中定义成函数进行初始化
+
+pycharm断点调试选择调试的模块可以看到 调试信息里边 special variables里边会存放一些变量包括函数 在内存中初始化也是被看做变量 如果是函数变量 就会有一个{function}的表示  字符串就是 {str}表示
+不同类型在调试中显示的标识不一样 可以一目了然的看出来这个变量是函数还是 基础类型的数据结构
