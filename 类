@@ -184,3 +184,5 @@ pycharm断点调试选择调试的模块可以看到 调试信息里边 special 
 
 py文件都要是utf-8文件-可以在pycharm fileencode中设置文件的编码
 bat要是gbk编码才行否则报错
+
+
