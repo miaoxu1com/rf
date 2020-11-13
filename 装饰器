@@ -2,3 +2,6 @@
 wrap（func）return log
 func = wrap
 func注入和 func赋值给原函数的步骤
+
+__slots__ liaoxuefeng
+backoff 优雅轮询
