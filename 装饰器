@@ -5,3 +5,6 @@ func注入和 func赋值给原函数的步骤
 
 __slots__ liaoxuefeng
 backoff 优雅轮询
+
+
+可以把函数放在return 中相当于执行加返回
