@@ -47,7 +47,8 @@ base64编码
 现在，您可以仅依靠peekaboo.pyc来愉快地导入peekaboo。由于peekaboo.pyc是字节编译的，因此临时用户无法读取。
 尽管它很容易受到py_to_pyc反编译器的攻击，但它应该比base64解码更加安全。
 
-
+点击翻译图标切换语言
+https://stackoverrun.com/cn/q/3223030
 我执行此操作的方法如下：
 
 在python shell上：
@@ -93,6 +94,24 @@ hashed_password = bcrypt.hashpw(combo_password, salt)
 保存盐和散列密码的地方。所以每当你需要使用的密码，您正在阅读的加密密码，并测试对原料您再次输入密码。
 
 这基本上是如何登录这些天应该如何工作。
+
+
+安全方式是使用AES加密您的敏感数据，加密密钥是由基于密码的密钥导出函数（PBE）派生的，用于AES加密/解密加密密钥的主密码。
+
+主密码 - >通过密钥
+
+固定键 - >加密数据可以使用pbkdf2
+
+from PBKDF2 import PBKDF2 
+from Crypto.Cipher import AES 
+import os 
+salt = os.urandom(8) # 64-bit salt 
+key = PBKDF2("This passphrase is a secret.", salt).read(32) # 256-bit key 
+iv = os.urandom(16)  # 128-bit IV 
+cipher = AES.new(key, AES.MODE_CBC, iv) 
+确保存储盐/ IV /密码，并使用解密相同的盐/ iv/passphase
+
+Weblogic使用类似的方法来保护配置文件中的密码
 
 https://www.liujiangblog.com/course/python/64
 getpass
