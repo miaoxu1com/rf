@@ -29,6 +29,7 @@ for v in v["age"]
   
   如果要设置两个不同时间点的定时任务 就要分两次设置 一个时间点是 早上  一个是晚上
 
+轮询查询一定要指定一个次数 作为轮询终止的条件 如果不指定会死循环 或者指定查询时间也可以
 
 密码加密方案
 base64编码
@@ -74,4 +75,21 @@ cipher = Fernet(key)
 mypassword = cipher.decrypt(token).decode('utf-8')
 完成此操作后，您可以直接导入mypassword，也可以导入令牌和密码以根据需要进行解密。
 
-显然，这种方法有一些缺点。如果某人同时拥有令牌和密钥（就像他们拥有脚本一样），则他们可以轻松解密。但是，它确实很模糊，如果您编译代码（使用Nuitka之类的代码），至少您的密码不会在十六进制编辑器中显示为纯文本。
+显然，这种方法有一些缺点。如果某人同时拥有令牌和密钥（就像他们拥有脚本一样），则他们可以轻松解密。但是，它确实很模糊，如果您编译代码（使用Nuitka之类的代码），
+至少您的密码不会在十六进制编辑器中显示为纯文本。
+
+知道主密钥自己。不要硬编码。
+
+使用py-bcrypt（bcrypt），强大的哈希技术来自己生成密码。
+
+基本上可以做到这一点（的想法...）
+
+import bcrypt 
+from getpass import getpass 
+master_secret_key = getpass('tell me the master secret key you are going to use') 
+salt = bcrypt.gensalt() 
+combo_password = raw_password + salt + master_secret_key 
+hashed_password = bcrypt.hashpw(combo_password, salt) 
+保存盐和散列密码的地方。所以每当你需要使用的密码，您正在阅读的加密密码，并测试对原料您再次输入密码。
+
+这基本上是如何登录这些天应该如何工作。
