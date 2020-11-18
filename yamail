@@ -8,3 +8,4 @@
 
 然后修改_login方法的self.name发送地址名 为登录用户名就可以了
 发送__atemp_send就是发送 _login就是登录
+yagmail是在smtplib的基础上进行封装的 也导入了smtplib库 然后使用smtp.login放在自己的_login中
