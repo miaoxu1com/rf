@@ -26,3 +26,6 @@ from后面一定是跟的路径  import是文件
 如果还是没有就去解释器中设置的路径找 就是解释器内置的函数sys  sys.path里边去找
 相对引入容易出错 不推荐使用 还是使用绝对路径
 https://cloud.tencent.com/developer/article/1394994
+
+
+a引入当前文件b  那么每次调用b中的方法时  都要加上b.funcname 才可以用
