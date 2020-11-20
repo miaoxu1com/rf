@@ -30,3 +30,5 @@ https://cloud.tencent.com/developer/article/1394994
 
 a引入当前文件b  那么每次调用b中的方法时  都要加上b.funcname 才可以用
 https://www.cnblogs.com/linyfeng/p/9158339.html
+
+如果使用import导入每次就要 加模块名调用方法 用from import *  就可以不用加模块名更方便
