@@ -1,0 +1,2 @@
+robotframework  如果xml suite是多层嵌套 则测试报告解析不到错误步骤，必须是单层的suite  要分析robot  和 hyrobot输出的xml差异就要把每层的test折叠起来  研究最小单元的差异  robot中test使用了很多
+kw  用户关键字 但是hyrobot用的少了  对比错误用例  test的差异
