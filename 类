@@ -190,4 +190,5 @@ bat要是gbk编码才行否则报错
 
 当你的包含在别人的list中时  要共用简便的做法是从它的结构体重  切片组装成自己要的数据
 
-
+如果请求入参是list 发送请求时传给json  就会变成字符串  所以入参是list  就要传给data  request.post(url,data = data,headers=headers)
+不能request.post(url,json = data,headers=headers)
