@@ -1,0 +1,27 @@
+可以使用robot.api  中的 ExecutionResult类解决
+https://blog.csdn.net/jiangbb8686/article/details/97777742
+
+可以用该类获取统计信息--失败用例 成功用例  成功率这些
+
+suites = ExecutionResult(xmlpath).suite
+suites.suites
+python referenced before assignment问题
+https://blog.csdn.net/basycia/article/details/52556131
+
+出现这个问题的原因是  在函数外边初始化了变量
+但是没有在函数中用global声明
+而且在函数中才会提示 global关键字
+suite_list = []
+def get_suite_from_xml()
+  global suitelist
+ 
+a[:5] 切片
+a= []
+b= []
+有的时候 循环返回很多一位数组  我们需要把 这些一位数组合并成一个大的一位数组
+a+b  就可以实现合并
+
+递归就是函数自己调用自己
+在python中可以不用写  跳出条件  获取不到数据递归自动就终止了
+很方便
+有的类调用返回的是一个类集合  可以转换成list  放到list中  转换后list中的成员还是类
