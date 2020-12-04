@@ -1,4 +1,18 @@
+
 Python同步遍历多个列表
 https://blog.csdn.net/Gsdxiaohei/article/details/81701957
 
 [for  in  if  not in]  就是for循环嵌套 if 语句
+pop 弹出的是最后一个
+
+del可以指定
+
+%格式化占位符 格式化字符串类似c语言风格   熟悉这个语言的可能习惯了这个风格
+
+
+3.6之后引入了 
+f"i {a}"格式化性能更好
+比起 string.format() 和 
+Python格式化字符串f-string概览
+https://blog.csdn.net/sunxb10/article/details/81036693
+string.sendswith  判断字符串结尾
