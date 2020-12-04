@@ -4,3 +4,5 @@ https://www.runoob.com/w3cnote/python-variable-references-and-copies.html
 
 动态赋值用的是引用  所以要想不影响字典中的值 可以  k= copy.deepcopy(k) 把本身重新复制一份重新赋值给本身
 或者再循环体中 每次都初始化变量 k={}这样也可以达到不影响字典内容
+
+win 不支持shell连接
