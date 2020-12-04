@@ -27,3 +27,7 @@ a+b  就可以实现合并
 有的类调用返回的是一个类集合  可以转换成list  放到list中  转换后list中的成员还是类
 
 xml文件解析 也是按照节点解析的每一个节点解析为一个对象  节点类似于目录系统
+
+文件系统就这么循环 取自己用到的就行用不到不用
+  for dirpath,dirnames,filenames in os.walk(dir)
+    os.path.join(dirpath,filename)
