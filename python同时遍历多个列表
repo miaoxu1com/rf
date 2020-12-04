@@ -16,3 +16,6 @@ f"i {a}"格式化性能更好
 Python格式化字符串f-string概览
 https://blog.csdn.net/sunxb10/article/details/81036693
 string.sendswith  判断字符串结尾
+
+
+高阶文件操作 删除目录树  删除路径整个上下文根结构  不仅仅是一级的目录
