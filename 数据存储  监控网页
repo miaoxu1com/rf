@@ -74,3 +74,9 @@ web的访问过程  dns解析  建立连接  发送请求  服务器响应 接�
 
 内网扫描工具  扫描服务端口扫描出来了  在内网大部分都是ip直接访问 而不是域名所以扫出来ip肯定就可以访问ftp了拿ip直接访问ftp
 ip  访问就要走7层协议
+
+
+
+Python 分析网页应该用 requests + lxml，前者下载内容，后者有 HTML Parser 并且支持 XPath 语法。
+
+标准库的 urllib 系的 API 设计实在反人类，Beautiful Soup 的 CSS 选择器其实远不如 XPath 灵活和易于修改
