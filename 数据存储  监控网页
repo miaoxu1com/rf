@@ -80,3 +80,23 @@ ip  访问就要走7层协议
 Python 分析网页应该用 requests + lxml，前者下载内容，后者有 HTML Parser 并且支持 XPath 语法。
 
 标准库的 urllib 系的 API 设计实在反人类，Beautiful Soup 的 CSS 选择器其实远不如 XPath 灵活和易于修改
+
+
+
+如何不刷新网页而监控网页变化？
+我在用python监控一个网页 这个网页不定时的会更新 我要寻找需要匹配的关键词比如‘ABC’ 大概的程序框架如下
+基本方法就是 用 selenium 获取源码 然后beautifulsoup解析 然后再去结果里面match 每2秒循环一次
+
+while true:
+    html = browser.page_source
+    soup = BeautifulSoup(html)
+    abc=soup.find_all(text=re.compile("(ABC)"))    
+    if not abc:
+         .....
+    else:
+         .....   
+    browser.refresh()
+    time.sleep(2.0 - ((time.time() - starttime) % 2.0))
+现在问题就是这个程序很依赖网速，browser.refresh() 刷新一次有可能就会用1秒钟
+有没有什么办法 不需要刷新网页 就能知道网页有变化
+或者有没有其他办法能让我这个程序 不被网速拖累
