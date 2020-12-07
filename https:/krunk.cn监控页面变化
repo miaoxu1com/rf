@@ -5,3 +5,7 @@ https://krunk.cn/kblog1035.html
 chrome扩展
 https://zhuanlan.zhihu.com/p/26180758
 https://www.zhihu.com/question/27720717
+
+
+python爬虫  然后再把数据用python 弄到influxdb  然后配置grafana数据源为influxdb 就可以了
+https://www.jianshu.com/p/276ef18748f8
