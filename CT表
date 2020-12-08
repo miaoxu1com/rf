@@ -34,3 +34,44 @@ python调用 大漠插件 注册dll调用就行
 其实语言编程编的好不好就是看你对函数理解的深不深 再加上逻辑好  
 
 接口是一个对象上一组操作的集合，不涉及任何实现的细节，接口标志着方法和实现的分离。计算机中这种现象叫做解耦
+
+
+按键精灵  八岐旅人自动战斗脚本  遇到的困难战斗时战斗背景会有规律的晃动
+战斗菜单位置也会发生偏移 当时通过找图  找色都是找不到  最后通过 大漠插件创建字库
+找战斗  进入战斗画面的标识  由于八岐旅人大部分操作 都是通过键盘实现的所以自动化实现起来就很简单  然后找字时  主要设定 相似度  相似度其实就是搜索的模糊匹配 按照点阵的%相似度进行匹配
+还有就是建立字库时偏色尽可能设置的大一点减少了手动找色而且偏色大复制出来的代码只有一个偏色容易找
+只需要进入战斗画面 按下向下选择技能 然后 按三次enter就可以了 
+KeyPress "Enter", 3 连按三次
+主意连按三次和 按三次的差别
+KeyPress "Enter", 1
+Delay 100
+KeyPress "Enter", 1
+Delay 100
+KeyPress "Enter", 1
+
+按键精灵的自动化和python selium自动化类似 也是要等待元素的出现 延时等战斗菜单的出现  然后等任务放技能战斗画面延时  各种延时
+元素出现 找元素 然后自动战斗 配合ct表完美自动化 特别是大部分键盘操作的 游戏自动化起来很容易
+
+set dm = createobject("dm.dmsoft")
+base_path = dm.GetBasePath()
+dm_ret = dm.SetPath(base_path)
+dm_ret = dm.SetDict(0, "G:\Users\miaoxu\Desktop\八岐旅人找图\zk.txt")
+Do
+	For 4
+		Delay 200
+		dm_ret = dm.FindStr(1144,626,1514,684,"战斗","ffffff-606060",0.7,x,y)
+		If x > -1 and y > -1 Then 
+    		TracePrint "进入战斗了x=" & x & "y="&y
+			KeyPress "Down", 1
+			KeyPress "Enter", 3
+			Delay 200
+		Else 
+    		TracePrint dm_ret
+	//    	Call Plugin.Pic.PrintScreen(0,0,1920,1080,"G:\Users\miaoxu\Desktop\八岐旅人找图\战斗1.bmp")
+	//    	KeyPress "Enter", 10
+		End If
+	
+	//	KeyPress 108,1
+	Next
+Loop
+
