@@ -15,6 +15,11 @@ out：
 ['giraffe', 'goose', 'mouse', 'lion', 'deer', 'tiger', 'ox']
 就是把单词取反然后对原来的列表进行排序，不是对取反后的排序
 由于取反以e结尾的是一样的所以一定能爬到一起  而且e 按照自然排序是最前的所以e结尾的排在最前边
+在Python中，迭代是通过for ... in来完成的，而很多语言比如C语言，迭代list是通过下标完成的，比如Java代码：
 
+for (i=0; i<list.length; i++) {
+    n = list[i];
+}
+改变下标 在python中不好实现
 
 
