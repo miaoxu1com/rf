@@ -4,3 +4,17 @@
 [::5] 每5个取一个元素
 
 list 接受一个 迭代对象 也就是说 只要是迭代对象都可以转成列表
+
+stored(itera,function)
+
+def reverse(word):
+    return word[::-1]
+animals = ['ox', 'giraffe', 'mouse', 'tiger', 'lion', 'deer', 'goose']
+r = sorted(animals, key=reverse)
+out：
+['giraffe', 'goose', 'mouse', 'lion', 'deer', 'tiger', 'ox']
+就是把单词取反然后对原来的列表进行排序，不是对取反后的排序
+由于取反以e结尾的是一样的所以一定能爬到一起  而且e 按照自然排序是最前的所以e结尾的排在最前边
+
+
+
