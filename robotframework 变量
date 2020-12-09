@@ -149,3 +149,6 @@ robotframework在命名参数之后获得位置参数 报这个错误 使用post
 在测试套件中加一个__init__.py文件就可以执行自定义的测试套目录了
 
 调试技能很重要 无论学什么语言 都要会调试
+
+python  is False  不用 == False
+
