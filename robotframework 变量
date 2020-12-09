@@ -145,3 +145,5 @@ nginxparser怎么用
 
 robotframework在命名参数之后获得位置参数 报这个错误 使用postman转换成code之后 在notepad++中格式化后赋值给data还是报这个错误  然后直接赋值postman转化带格式的code直接赋值给data解决了这个问题
 涉及到job的必须转换之后赋值给data才不会报错
+
+在测试套件中加一个__init__.py文件就可以执行自定义的测试套目录了
