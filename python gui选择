@@ -1,2 +1,8 @@
 python  gui开发选择
 https://lovesoo.org/2020/03/14/pyqt-getting-started/
+
+
+venv环境真方便  有正在开发的正式代码 
+另外需要一个练习环境venv  安装库时只会安装在venv中 实现环境隔离
+qt desinger  和 pyqt5  是分开的 要下载pyqt5 就要下载 库pyqt-tools库才行
+而且需要把desinger.exe  配置到pycahrm扩展工具中 工作目录就是 保存文件时要保存的目录
