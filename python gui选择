@@ -6,3 +6,8 @@ venv环境真方便  有正在开发的正式代码
 另外需要一个练习环境venv  安装库时只会安装在venv中 实现环境隔离
 qt desinger  和 pyqt5  是分开的 要下载pyqt5 就要下载 库pyqt-tools库才行
 而且需要把desinger.exe  配置到pycahrm扩展工具中 工作目录就是 保存文件时要保存的目录
+venv的python也被重新复制了一份  所以要用venv中的库就要用 venv的python运行否找到不到
+pyuic  就是用PyQt5.uic.pyuic 模块里边pyuic.py 转换的 要先选中文件然后转换
+
+为什么要创建一个单独的环境变量名字 因为后面要引用  如果都放入到path  就无法单独引用 需要的值了
+
