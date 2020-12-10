@@ -4,3 +4,4 @@ bytes(str,encoding="utf-8")
 代表把字符串编码成以utf-8编码成bytes数据流 utf-8汉子3个字节  所以编码后是6个  \xe0这种的显示
 可以把utf-8编码成bytes流类型的数据
 https://blog.csdn.net/lyb3b3b/article/details/74993327
+语法 就是 数据类型  方法  函数 类   除了这些之外就是语法结构了  比如  for in  既不是数据类型 也不是方法 也不是 函数  定位到定义处  也找不到位置 所以就是语法结构
