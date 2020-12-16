@@ -8,4 +8,8 @@ https://blog.csdn.net/lyb3b3b/article/details/74993327
 
 http传输的时候把传输的内容编码成字节流  所以接收到的数据会显示 /xx这种形式  我们要打印显示出原始内容  直接把字节流解码成 utf-8编码即可 
 但是有的时候 我们接受的内容是lant-1这种编码  我们只需要把内容重新编码成utf8即可  这种问题常出现在文件编码中 比如文件gbk编码 pycharm转成utf-8
+python的str类型编码 使用的unicode编码
+utf-8  会把ascii吗编码成1个字节 把中文编码成2个字节
+磁盘  传输 编码都用utf-8
+
 
