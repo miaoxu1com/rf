@@ -2,3 +2,12 @@
 selenuim元素可以定位但无法点击
 https://blog.csdn.net/jialingbb/article/details/105825931
 https://huilansame.github.io/huilansame.github.io/archivers/mouse-and-keyboard-actionchains
+selenium处理元素定位到了点击无效问题
+https://www.cnblogs.com/yhleng/p/10212534.html
+arguments[0]-就是方法的第一个入参element
+arguments[1]-就是方法的第二个入参"border: 2px solid red;"
+ self.driver.execute_script(
+            "arguments[0].setAttribute('style', arguments[1]);",
+            element,
+            "border: 2px solid red;" #边框border:2px; red红色
+        )
