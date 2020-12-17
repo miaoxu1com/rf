@@ -1,1 +1,4 @@
 驱动放在script  点击运行 代码一直没有运行原来是 右上角的执行文件不是  要右键运行当前打开的文件  http路径前要加一个r 不然容易报错  报unicode转码报错
+selenuim元素可以定位但无法点击
+https://blog.csdn.net/jialingbb/article/details/105825931
+https://huilansame.github.io/huilansame.github.io/archivers/mouse-and-keyboard-actionchains
