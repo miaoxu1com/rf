@@ -4,3 +4,4 @@ time.strtime("%H:%m:%d H:%M:%S",time.localtime(time.time)) 字符串格式看源
 可以看time.localtime返回的是元组正好符合time.strtime 第二个参数传元组的要求
 time.localtime()  正好是传时间戳
 datetime可以获取自定义时间
+post请求时间入参是datetime  所以需要用datetime进行时间处理
