@@ -1,0 +1,6 @@
+time只能获取当前时间 不能获取自定义时间  而且如果不知道格式化或者入参的数据类型  就去看源码 
+比如
+time.strtime("%H:%m:%d H:%M:%S",time.localtime(time.time)) 字符串格式看源代码 可以知道格式化格式
+可以看time.localtime返回的是元组正好符合time.strtime 第二个参数传元组的要求
+time.localtime()  正好是传时间戳
+datetime可以获取自定义时间
