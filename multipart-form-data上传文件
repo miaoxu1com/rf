@@ -4,3 +4,6 @@ python multipart/form-data上传文件 google
 还有request发送post请求 可以auth 赋值认证信息  auth=("user","pass") 或者  s=requets.session()
 s.auth = ("user","pass")
 
+multipart/form-data原理
+https://blog.csdn.net/liyingke112/article/details/70233776
+
