@@ -1,0 +1,6 @@
+python multipart/form-data上传文件 google
+文件的编码是用元组在file里边指定的
+{'file': ('report.xls', open('report.xls', 'rb'), 'application/vnd.ms-excel', {'Expires': '0'})}
+还有request发送post请求 可以auth 赋值认证信息  auth=("user","pass") 或者  s=requets.session()
+s.auth = ("user","pass")
+
