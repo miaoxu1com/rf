@@ -1,0 +1,6 @@
+exec("a='n'")
+在 Python 的命名空间中，将变量名与值存储在字典中，可以通过 locals()，globals() 函数分别获取局部命名空间和全局命名空间
+GStore= globals()
+可以动态赋值
+https://www.runoob.com/w3cnote/python-dynamic-var.html
+定义一个全局变量放在这个字典中的值就都是全局数据了
