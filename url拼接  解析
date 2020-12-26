@@ -3,3 +3,5 @@ for k,v in data.items():
     
  路径拼接
 https://my.oschina.net/u/2474096/blog/1593377
+
+url切割成单元进行处理
