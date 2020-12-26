@@ -11,3 +11,16 @@ data ={
 }
 https://www.deeporz.com/2019/02/14/Python%E5%8F%91%E9%80%81POST%E8%AF%B7%E6%B1%82%E4%B9%8Bmultipart_form-data/
 https://www.jb51.net/article/80490.htm
+
+
+如果是这种抓包就可以看到文件部分用的文件这个部分值时字符串
+data ={
+  "name":"",
+  "name":""
+}
+如果这个样抓包值部分就是json对象 放在post data中发送
+data = {
+  "name":"{
+  }"
+}
+还有就是在file中把file:("packgname","""json对象当做字符串""",指定上传流的方式)
