@@ -1,0 +1,4 @@
+for k,v in data.items():
+    lt.append(k+'='+str(v))
+    
+ 路径拼接
