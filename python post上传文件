@@ -24,3 +24,6 @@ data = {
   }"
 }
 还有就是在file中把file:("packgname","""json对象当做字符串""",指定上传流的方式)
+
+要看是用data还是file  就看数据流格式上传用form-data那就是data可能性大   如果用application/json传输数据那就是 file因为上传文件  data默认都是form-data
+还有就是看是不是file  可以调整入参的格式  抓包看格式会不会因为入参格式变化而变化 如果变化了就说明是字符串  file  data都可以指定
