@@ -3,7 +3,7 @@ https://www.cnblogs.com/bainianminguo/p/12099532.html
 files={
   filename:"packgname",
   file:("packgname",open(path),上传流的方式),
-  content-Type:"form-data"
+  content-Dispostion:"form-data"
 }
 
 data ={
