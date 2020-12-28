@@ -29,3 +29,4 @@ data = {
 还有就是看是不是file  可以调整入参的格式  抓包看格式会不会因为入参格式变化而变化 如果变化了就说明是字符串  file  data都可以指定
 
 params 就是url里边 所以可以用json_data.url打印params  不用import json  直接json_data.json()  json_data.content 显示b字节流内容  直接json.text 中文不会显示16进制
+索引报错打印list长度
