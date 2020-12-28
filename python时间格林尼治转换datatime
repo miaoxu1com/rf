@@ -1,1 +1,2 @@
 https://www.cnblogs.com/huchong/p/11251650.html
+datetime.datetime.strptime(时间字符串,"%Y-%m-%dT%H:%M:%S.000")把"%Y-%m-%dT%H:%M:%S.000"这种格式的时间字符串转换成时间
