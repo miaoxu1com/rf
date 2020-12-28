@@ -1,0 +1,7 @@
+打印
+https://blog.csdn.net/Alger_magic/article/details/81185199
+json.dumps(data, sort_keys=True, indent=4, separators=(', ', ': '))
+多行字符串 """
+"id":"%s"/"{}"
+""" % (id)
+多行且是json串 用%才行  format由于要去检查{}和json的{}冲突会报错
