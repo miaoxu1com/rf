@@ -34,3 +34,4 @@ requests返回的数据可以直接
 response.json()  不用json.loads(reponse.content)转了
 reponse.requets.body
 reponse.text
+查询任务id共用可以用 g=globals() 重复设置个g["id"] 在函数中使用  不同的就是用name区分是什么任务调用了函数打印出来就行了
