@@ -30,3 +30,7 @@ data = {
 
 params 就是url里边 所以可以用json_data.url打印params  不用import json  直接json_data.json()  json_data.content 显示b字节流内容  直接json.text 中文不会显示16进制
 索引报错打印list长度
+requests返回的数据可以直接
+response.json()  不用json.loads(reponse.content)转了
+reponse.requets.body
+reponse.text
