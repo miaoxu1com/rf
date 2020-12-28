@@ -9,4 +9,5 @@ https://blog.csdn.net/liyingke112/article/details/70233776
 
 
 post  data如果是字符串  就不会用form-data编码 如果是json就会用把字典按照key=value编码 所以post data可以使用json字符串
+就两种形式 一种是data中json字符串  一种是file中json字符串 在form-data中使用json对象都会被编码
 
