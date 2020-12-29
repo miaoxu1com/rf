@@ -1,0 +1,10 @@
+实现until 效果直到查询到的状态是你想要的值
+可以用callable
+def status(flag_bool) -- 这个函数的值 是被装饰函数的返回值 要返回True 或者 False用来判断是否继续轮询  要根据具体的返回值来判断对比 何时返回True 或 False
+  return flag_bool
+backoff.on_predicate(backoff.constant,callable,interval=6)
+
+https://juejin.cn/post/6844903983237038093
+
+要实现在backoff.on_predicate修饰的函数中实现换行 就要先print("\n")
+因为在你代码前会先发送请求打印每次请求记录
