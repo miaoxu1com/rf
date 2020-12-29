@@ -35,3 +35,8 @@ response.json()  不用json.loads(reponse.content)转了
 reponse.requets.body
 reponse.text
 查询任务id共用可以用 g=globals() 重复设置个g["id"] 在函数中使用  不同的就是用name区分是什么任务调用了函数打印出来就行了
+
+可以把要打印的封装成debug_info 然后设置一个全局对象 这样就不用每次都给debug_info 传参了
+
+16进制查看不同的字符编码下十六进制编码结果
+https://xiaogd.net/%E8%A1%A8%E5%8D%95%EF%BC%88form%EF%BC%89-post-%E6%96%B9%E5%BC%8F%E6%8F%90%E4%BA%A4%E6%97%B6%E7%9A%84%E7%BC%96%E7%A0%81%E4%B8%8E%E4%B9%B1%E7%A0%81%EF%BC%88%E4%B8%8B%EF%BC%89/
