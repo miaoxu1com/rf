@@ -5,3 +5,24 @@ def get_suites_from_xml(xml_suite):
       if len(list(sts.suites))> 0:
         suite_list = suite_list + list(sts.suites)
       get_suites_from_xml(sts.suites)  
+
+def get_fail_info(xml)
+ global test_list 
+ sts = ExcutionResult(xml).suite.suites
+ get_suites_from_xml(sts)
+ 
+ for sss in suite_list:
+  if(len(list(sss.tests)) > 0):
+    test_list = test_list + list(sss.tests)
+ resultlist = []
+ for test in test_list:
+  if(tets.status == 'FAIL'):
+    resultdict = {}
+    resultdict['name'] = test.name
+    resultdict['status'] = test.status
+    resultdict['message'] = test.message
+    test_keyword = test.keywords
+    for kws in test_keyword:
+      if kws.status == 'FAIL':
+        resultdict['teststep'] = kws.name
+return   resultdict
