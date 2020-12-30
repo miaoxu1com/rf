@@ -1,0 +1,7 @@
+def get_suites_from_xml(xml_suite):
+  global suite_list
+  for sts in xml_suite:
+    if sts.__class__.__name is "TestSuite":
+      if len(list(sts.suites))> 0:
+        suite_list = suite_list + list(sts.suites)
+      get_suites_from_xml(sts.suites)  
