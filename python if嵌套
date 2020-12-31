@@ -1,0 +1,8 @@
+如果是 两个条件 就分两层不要
+if type == "post" and file is not None:
+  pass
+if type == "post" and data is not None:
+  pass
+if type == "post" and params is not None
+  pass
+这样写冗余太多
