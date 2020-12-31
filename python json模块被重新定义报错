@@ -1,0 +1,5 @@
+globals["json"]
+这样就会重新定义json导致json库用不了
+globals()["json_data"]
+
+函数接受key 然后赋值给变量发送post请求
