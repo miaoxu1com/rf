@@ -1,0 +1,29 @@
+在数据抓取的时候，经常我们会将数据以json格式保存至文件中，例如在用Scrapy抓取时，默认会将所有数据导出至指定的FEED_URI配置中。
+
+由于保存下来的文件非常大，从几百兆到几GB几十GB甚至上百GB，我们在读取文件进行数据处理的时候需要特别注意，不能使用类似fp.read()这样的函数直接读取文件所有内容，否则我们的机器可能会直接卡死。造成这样情况的原因很简单，read()函数会将文件所有的内容存放至我们电脑的内存中，面对这动辄上G的内容，对于普通机器来说，我们的内存是铁定吃不消的。
+
+所以我们在处理这样超大文件的时候，需要以stream的方式，一行一行地读取数据。需要注意的是，我们的文件需要以行为单位来储存json对象，即每一行都是一个单独的json对象。Scrapy默认会以这种形式输出数据。在这个前提之下，我们可以使用以下代码来处理我们的数据文件：
+
+with open('filename', 'r') as f:
+    for cnt, line in enumerate(f):
+        try:
+            line = line.strip('\n').strip(',')
+            json_obj = json.loads(line)
+        except Exception as e:
+            print(e)
+            continue
+由于Scrapy的FEED文件输出是以下形式：
+
+[
+{"name": "eagle", "website": "blog.sbot.io"},
+{"name": "eaglegle", "website": "www.sbot.io"}
+]
+
+所以我们在读取每一行时，需要先将该行内容进行处理得到有效的json格式后才能使用json.loads将json对象读取进变量中。
+
+以这样的形式读取，就不存在需要将整个文件读取进内存的尴尬局面。另外如果你有更多的需求，也可以考虑使用ijson这个插件。
+
+https://blog.sbot.io/articles/49/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8Python%E8%AF%BB%E5%8F%96%E8%B6%85%E5%A4%A7json%E6%96%87%E4%BB%B6
+
+惰性迭代器
+https://www.itdaan.com/blog/2017/12/13/87aa99b5bc4991f3ff3603ecc7b9c824.html
