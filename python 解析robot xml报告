@@ -26,3 +26,6 @@ def get_fail_info(xml)
       if kws.status == 'FAIL':
         resultdict['teststep'] = kws.name
 return   resultdict
+
+robotframework 测试报告模板 google
+https://www.cnblogs.com/fulu/p/13625585.html
