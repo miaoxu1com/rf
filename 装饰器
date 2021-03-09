@@ -6,6 +6,22 @@ func注入和 func赋值给原函数的步骤
 __slots__ liaoxuefeng
 backoff 优雅轮询
 
+装饰器实际就是参数注入  带参数的装饰器  
+
+第一层函数先注入参数，第二层函数再注入函数，第三层函数执行函数
+def args(flag)
+  def myfunc(func)
+    def exec(*args,**kwargs)
+      func(*args,**kwargs)
+      if flag==True:
+        print(func.__name__+"被执行")
+      else:
+        print("test")
+
+@log(flag)
+def exec（）
+  print（"test"）
+log('execute')(now)
 
 可以把函数放在return 中相当于执行加返回
 
