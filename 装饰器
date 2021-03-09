@@ -9,6 +9,7 @@ backoff 优雅轮询
 装饰器实际就是参数注入  带参数的装饰器  
 
 第一层函数先注入参数，第二层函数再注入函数，第三层函数执行函数
+而且必须把函数一层一层的返回因为要回调
 def args(flag)
   def myfunc(func)
     def exec(*args,**kwargs)
@@ -17,6 +18,8 @@ def args(flag)
         print(func.__name__+"被执行")
       else:
         print("test")
+    return exec
+  return myfunc
 
 @log(flag)
 def exec（）
