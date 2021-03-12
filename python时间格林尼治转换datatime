@@ -1,3 +1,8 @@
 https://www.cnblogs.com/huchong/p/11251650.html
 datetime.datetime.strptime(时间字符串,"%Y-%m-%dT%H:%M:%S.000")把"%Y-%m-%dT%H:%M:%S.000"这种格式的时间字符串转换成时间
 要想把时间格式化成  本地--%Y-%m-%dT%H:%M:%S.000字符串格式 就要被格式化的数据里边含有年月日时分秒
+
+time  asctime 用不上一般 asc是国际事件格式  time获取的是时间戳 返回的是时间元组是不能修改的  只能取来用  time模块最常用的就是 time.strtime time.localtime  这两个  看下time 模块支持的函数
+就这两个函数 最常用其他的函数 不常用
+
+操作日期比如 以天为单位的 就要用datetime
