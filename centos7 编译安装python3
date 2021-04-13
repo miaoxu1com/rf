@@ -1,2 +1,16 @@
 https://www.jianshu.com/p/4302ecce44cb
 https://blog.csdn.net/shijin741231/article/details/110196975
+
+
+
+https://blog.csdn.net/Quincuntial/article/details/84615285
+解压指定文件夹下
+https://blog.csdn.net/helongzhong/article/details/75018958
+xshell自动断开解决
+解决timed out waiting for input: auto-logout问题
+注意：设置了readonly 之后在当前shell下是无法取消的，需要先将/etc/profile 中设置readonly行注释起来或直接删除，logout 后重新login 。
+https://blog.csdn.net/Quincuntial/article/details/84615285
+
+!#/bin/bash  启动新的shell进程
+exec命令
+https://blog.csdn.net/zyc_love_study/article/details/80918022
