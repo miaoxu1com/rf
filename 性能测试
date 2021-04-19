@@ -3,5 +3,8 @@ https://www.huaweicloud.com/articles/5184b16214dcb18730653d7de3d93ace.html
 2.jmeter 压测常见的几种报错
 https://www.cnblogs.com/shenh/p/10240714.html
 
+
+查看进程资源占用 确认是什么进程资源占用高的  如果是服务进程 就要看下服务连接数    然后查看线程
+
 Linux查询那些IP连接本机、查看TCP连接、统计指定端口连接数量以及TCP连接的各种状态和回收时长
 https://www.jianshu.com/p/863d4f3fddef
