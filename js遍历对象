@@ -1,1 +1,3 @@
 $(选择器获取的元素转成jquery对象).each
+
+foreach 只能遍历js数组
