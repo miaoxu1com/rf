@@ -8,3 +8,14 @@ for i in test_result:
         print('name', i.attrib['name'])
 for j in status_result:
     print("status", j.attrib["status"], "text", j.text)
+
+关键点 就是分析  pass  fail解析逻辑是不一样的
+把这两种解析出来就可以了
+
+找所有节点元素  元素有属性    还有就是节点树
+找父节点
+以及自己想要的节点  有了关系 然后再转类为字符串 判断是自己想要的对象就行
+
+主要就是分析 入参是什么是对象 还是字符串 
+
+不管是用了什么类 去处理了 结果就是要 字符串状态  字符串步骤
