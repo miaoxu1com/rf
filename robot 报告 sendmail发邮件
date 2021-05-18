@@ -1,0 +1,2 @@
+res_xml = 'http://jenkins_ip/job/' + jobstr + '/' + str(lastBuildNumber) + '/robot/report/output.xml'
+log_html = 'http://jenkins_ip/job/' + jobstr + '/' + str(lastBuildNumber) + '/robot/report/log.html'
