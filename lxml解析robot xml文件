@@ -1,0 +1,10 @@
+from lxml import etree
+
+html = etree.parse('output.xml')
+test_result = html.xpath("//status[@status='FAIL']/..")
+status_result = html.xpath("//test/status[@status='FAIL']")
+for i in test_result:
+    if 'test' in str(i):
+        print('name', i.attrib['name'])
+for j in status_result:
+    print("status", j.attrib["status"], "text", j.text)
