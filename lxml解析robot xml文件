@@ -1,3 +1,9 @@
+
+Python3解析XML文件(xml.etree.ElementTree)——以简单网络爬虫为例
+https://blog.csdn.net/qy20115549/article/details/82974466
+解析图片
+https://www.zhihu.com/question/20646644
+
 from lxml import etree
 这个是本地文件
 html = etree.parse('output.xml')
