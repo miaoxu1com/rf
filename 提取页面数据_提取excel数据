@@ -7,3 +7,5 @@ webbrowser xmlhttp  querytable
 
 Web Scraper 是一款免费的，适用于普通用户（不需要专业 IT 技术的）的爬虫工具
 提取网页数据到Excel，chrome控制台犀利用法-百度经验
+
+console 批量抓取 页面表格数据 google搜索
