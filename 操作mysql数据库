@@ -1,3 +1,5 @@
 执行完sql需要commit
 实现长连接
 https://blog.csdn.net/muslim377287976/article/details/103877003
+
+python 操作mysql 一个操作之后一定要close 不提交数据不会生效
